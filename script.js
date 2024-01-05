@@ -14,24 +14,15 @@ let dataBase = [{
 
 ];
 
-let input = function(){
-     userInput = prompt('Enter username');
-     passInput = prompt('Enter password');
-
+   let userInput = prompt('Enter username');
+   let passInput = prompt('Enter password');
+  
+   for (let i = 0; i < dataBase.length; i++) {
 }
-input();
-
 let passCheck = function (input){
-     if(userInput === dataBase[0].username && passInput === dataBase[0].password) {
-      alert(`Welcome!login successful`); 
-    } else if(userInput === dataBase[1].username && passInput === dataBase[1].password){
-        alert(`Welcome!login successful`);
-    } else if(userInput === dataBase[2].username && passInput === dataBase[2].password){
-        alert(`Welcome!login successful`);
-    } else if(userInput === dataBase[3].username && passInput === dataBase[3].password){
-        alert(`Welcome!login successful`);
-    } else{
+    if(userInput === dataBase[i].username && passInput === dataBase[i].password) {
+        alert('Sucessful! Welcome to your timeline')
+     } else{
         alert('Incorrect password,try again')
     }
 }
-passCheck();
